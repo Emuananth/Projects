@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 public class Completetest {
 	
-	// INitializing objects
+	// INitializing objects for
 	WebDriver wd;
 	
 	// Login with credentials
