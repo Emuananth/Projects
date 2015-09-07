@@ -33,6 +33,14 @@ public class projectslist {
 		{
 			login.s.findElement(By.xpath("/html/body/div/section/div/div[2]/div["+i+"]/div/div[1]/h4/a[1]")).click();
 			Thread.sleep(3000);
+			//String v = login.s.findElement(By.className("ph")).getText();
+			//System.out.println("No of Messages :" +v);
+			boolean chart = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div")).isDisplayed();
+			System.out.println("Is Volume chart displayed by default:" + chart);
+			boolean radio = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[3]/label[2]/span")).isSelected();
+			System.out.println("Is Volume Radio button selected:" +radio);
+			boolean rolling = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[3]/label[1]/span")).isSelected();
+			System.out.println("Is Rolling Sentiment Radio button selected by default:" + rolling);
 			login.s.findElement(By.xpath("/html/body/div[1]/header/nav/div[2]/ul[1]/li[3]/a")).click();
 			Thread.sleep(3000);
 		}
