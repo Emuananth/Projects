@@ -41,8 +41,11 @@ public class projectslist {
 			System.out.println("Is Volume Radio button selected:" +radio);
 			boolean rolling = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[3]/label[1]/span")).isSelected();
 			System.out.println("Is Rolling Sentiment Radio button selected by default:" + rolling);
+			boolean cdd = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[4]/div[1]/div/div[2]/div[2]/svg")).isDisplayed();
+			System.out.println("Is CDD displayed:" +cdd);
 			login.s.findElement(By.xpath("/html/body/div[1]/header/nav/div[2]/ul[1]/li[3]/a")).click();
 			Thread.sleep(3000);
+			
 		}
 	}
 	@AfterTest
