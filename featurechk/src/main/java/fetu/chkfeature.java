@@ -69,8 +69,8 @@ public void featureverify() throws InterruptedException
 	}
 	}while(cc == true);
 	System.out.println("No Sub-Categories are displayed or No subcategories available");
-	String red = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[1]")).getText();
-	String green = login.s.findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[2]")).getText();
+	String red = login.s.findElement(By.className("panel-heading")).findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[1]")).getText();
+	String green = login.s.findElement(By.className("panel-heading")).findElement(By.xpath("/html/body/div[1]/section/div/div[3]/div/div/div[1]/div[2]")).getText();
 	System.out.println("Total positive messages :" + green + "\n" +"Total negative messages :" + red);
 	String total = login.s.findElement(By.cssSelector("html.js.flexbox.flexboxlegacy.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.no-cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.generatedcontent.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths body div.wrapper section div.content-wrapper.pb0 div.row div.col-lg-12 div.panel.panel-default div.panel-heading div.panel-title span.count.text-muted")).getText();
 	System.out.println("Total messages :" + total);
